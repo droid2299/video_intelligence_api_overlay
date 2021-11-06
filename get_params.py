@@ -6,7 +6,7 @@ def parse_arguments():
     parser.add_argument(
             '--gcp_uri',
             type=str,
-            default='gs://poc-ml-metastorage-tmeg-1/darryl/Comcast/cut.mp4',
+            default='test_bucket/cut.mp4',
             help='''
                 GCP Bucket URI to the input video file to be processed''')
 
