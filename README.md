@@ -23,7 +23,7 @@ pip install -r requirements.txt
 - **- -min_confidence:** Minimum Confidence for overlaying on videos.
 - **- -language_code:** Language that will be used to transcribe the audio in the video file.
 
-****Note:*** By default the audio extracted from the video file will be uploaded to `poc-ml-metastorage-tmeg-1/darryl/Comcast/`. To change, edit ***line 78*** in file `comcast-main.py`. Please refer `get_params.py` for the default values.*
+****Note:*** By default the audio extracted from the video file will be uploaded to `test_bucket/`. To change, edit ***line 78*** in file `comcast-main.py`. Please refer `get_params.py` for the default values.*
 
 ### Usage:
 
