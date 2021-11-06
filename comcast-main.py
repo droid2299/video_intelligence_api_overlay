@@ -76,7 +76,7 @@ def video_to_audio(video_filepath, audio_filename, video_channels, video_bit_rat
     command = f"ffmpeg -i {video_filepath} -b:a {video_bit_rate} -ac {video_channels} -ar {video_sample_rate} -vn {audio_filename}"
     subprocess.call(command, shell=True)
     blob_name = f"{audio_filename}"
-    upload_to_gcs("poc-ml-metastorage-tmeg-1/darryl/Comcast/", audio_filename, blob_name)
+    upload_to_gcs("test_bucket/Comcast/", audio_filename, blob_name)
     
 
 
@@ -107,7 +107,7 @@ def main():
         print("sample_rate: "+str(sample_rate))
         print("Generating Audio File....")
         video_to_audio(path, "audio.wav", channels, bit_rate, sample_rate)
-        audio_uri = 'poc-ml-metastorage-tmeg-1/darryl/Comcast/audio.wav'
+        audio_uri = 'test_bucket/audio.wav'
         speech_to_text.caller(audio_uri , sample_rate , FLAGS.language_code , generated_subtitle)
 
 
